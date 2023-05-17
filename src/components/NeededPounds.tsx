@@ -9,21 +9,18 @@ const NeededPoundsForm = () => {
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
-    const response = await fetch(
-      "https://blooming-scrubland-79678.herokuapp.com/needed_weight",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          req: parseFloat(req),
-          r: parseFloat(r),
-          l: parseFloat(l),
-          c: parseFloat(c),
-        }),
-      }
-    );
+    const response = await fetch("http://127.0.0.1:5000/needed_weight", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        req: parseFloat(req),
+        r: parseFloat(r),
+        l: parseFloat(l),
+        c: parseFloat(c),
+      }),
+    });
     const data = await response.json();
     setResult(data.result);
   };

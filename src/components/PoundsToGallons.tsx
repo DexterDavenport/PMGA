@@ -6,18 +6,15 @@ const PoundsToGallonsForm = () => {
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
-    const response = await fetch(
-      "https://blooming-scrubland-79678.herokuapp.com/pounds_to_gallons",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          p: parseFloat(inputValue),
-        }),
-      }
-    );
+    const response = await fetch("http://127.0.0.1:5000/pounds_to_gallons", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        p: parseFloat(inputValue),
+      }),
+    });
     const data = await response.json();
     setResult(data.result);
   };
