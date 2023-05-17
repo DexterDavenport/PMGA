@@ -1,9 +1,11 @@
-import MyForm from './components/Input';
+import NeededPoundsForm from './components/NeededPounds';
+import PoundsToGallonsForm from './components/PoundsToGallons';
 
 function App() {
   return (
     <div className="App">
-      <MyForm />
+      <NeededPoundsForm />
+      <PoundsToGallonsForm />
     </div>
   );
 }

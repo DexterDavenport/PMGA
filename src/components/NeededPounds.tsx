@@ -1,6 +1,6 @@
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent } from "react";
 
-const MyForm = () => {
+const NeededPoundsForm = () => {
   const [req, setReq] = useState("");
   const [r, setR] = useState("");
   const [l, setL] = useState("");
@@ -9,18 +9,21 @@ const MyForm = () => {
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
-    const response = await fetch('http://localhost:5000/needed_weight', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        req: parseFloat(req),
-        r: parseFloat(r),
-        l: parseFloat(l),
-        c: parseFloat(c),
-      }),
-    });
+    const response = await fetch(
+      "https://blooming-scrubland-79678.herokuapp.com/needed_weight",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          req: parseFloat(req),
+          r: parseFloat(r),
+          l: parseFloat(l),
+          c: parseFloat(c),
+        }),
+      }
+    );
     const data = await response.json();
     setResult(data.result);
   };
@@ -59,4 +62,4 @@ const MyForm = () => {
   );
 };
 
-export default MyForm;
+export default NeededPoundsForm;
