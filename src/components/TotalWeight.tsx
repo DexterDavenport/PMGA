@@ -9,7 +9,7 @@ const TotalPoundsForm = () => {
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     const response = await fetch(
-      "https://eight-bees-act.loca.lt/total_weight",
+      "https://dexterdavenport.pythonanywhere.com/total_weight",
       {
         method: "POST",
         headers: {
