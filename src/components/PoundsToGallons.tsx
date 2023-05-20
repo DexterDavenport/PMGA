@@ -27,7 +27,7 @@ const PoundsToGallonsForm = () => {
       <form onSubmit={handleSubmit}>
         <label>Pounds:</label>
         <input
-          type="tel"
+          type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           placeholder="lbs"

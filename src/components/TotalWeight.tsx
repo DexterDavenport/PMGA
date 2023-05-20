@@ -31,19 +31,19 @@ const TotalPoundsForm = () => {
       <form onSubmit={handleSubmit}>
         <label>Final Weight:</label>
         <input
-          type="tel"
+          type="text"
           value={tr}
           onChange={(e) => setR(e.target.value)}
           placeholder="Left"
         />
         <input
-          type="tel"
+          type="text"
           value={tl}
           onChange={(e) => setL(e.target.value)}
           placeholder="Center"
         />
         <input
-          type="tel"
+          type="text"
           value={tc}
           onChange={(e) => setC(e.target.value)}
           placeholder="Right"

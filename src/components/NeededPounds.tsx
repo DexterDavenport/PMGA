@@ -33,25 +33,25 @@ const NeededPoundsForm = () => {
       <form onSubmit={handleSubmit}>
         <label>Needed Weight:</label>
         <input
-          type="tel"
+          type="text"
           value={req}
           onChange={(e) => setReq(e.target.value)}
           placeholder="Pilots Request"
         />
         <input
-          type="tel"
+          type="text"
           value={r}
           onChange={(e) => setR(e.target.value)}
           placeholder="Left"
         />
         <input
-          type="tel"
+          type="text"
           value={l}
           onChange={(e) => setL(e.target.value)}
           placeholder="Center"
         />
         <input
-          type="tel"
+          type="text"
           value={c}
           onChange={(e) => setC(e.target.value)}
           placeholder="Right"

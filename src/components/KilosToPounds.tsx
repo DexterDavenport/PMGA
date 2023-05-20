@@ -27,7 +27,7 @@ const KilosToPoundsForm = () => {
       <form onSubmit={handleSubmit}>
         <label>Kilos:</label>
         <input
-          type="tel"
+          type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           placeholder="kg"
