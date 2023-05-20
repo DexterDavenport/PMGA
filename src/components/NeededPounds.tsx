@@ -10,7 +10,7 @@ const NeededPoundsForm = () => {
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     const response = await fetch(
-      "https://five-nights-add.loca.lt/needed_weight",
+      "https://eight-bees-act.loca.lt/needed_weight",
       {
         method: "POST",
         headers: {

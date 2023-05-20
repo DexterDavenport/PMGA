@@ -7,7 +7,7 @@ const PoundsToGallonsForm = () => {
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     const response = await fetch(
-      "https://five-nights-add.loca.lt/pounds_to_gallons",
+      "https://eight-bees-act.loca.lt/pounds_to_gallons",
       {
         method: "POST",
         headers: {

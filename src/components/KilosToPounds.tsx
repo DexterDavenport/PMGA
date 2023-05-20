@@ -7,7 +7,7 @@ const KilosToPoundsForm = () => {
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     const response = await fetch(
-      "https://five-nights-add.loca.lt/kilos_to_pounds",
+      "https://eight-bees-act.loca.lt/kilos_to_pounds",
       {
         method: "POST",
         headers: {
