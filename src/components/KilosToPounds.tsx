@@ -7,7 +7,7 @@ const KilosToPoundsForm = () => {
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     const response = await fetch(
-      "https://five-nights-add.loca.ltkilos_to_pounds",
+      "https://five-nights-add.loca.lt/kilos_to_pounds",
       {
         method: "POST",
         headers: {
@@ -27,7 +27,7 @@ const KilosToPoundsForm = () => {
       <form onSubmit={handleSubmit}>
         <label>Kilos:</label>
         <input
-          type="text"
+          type="tel"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           placeholder="kg"
