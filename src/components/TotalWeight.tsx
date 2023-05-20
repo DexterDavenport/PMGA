@@ -9,7 +9,7 @@ const TotalPoundsForm = () => {
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     const response = await fetch(
-      "https://real-ants-travel.loca.lt/total_weight",
+      "https://five-nights-add.loca.lt/total_weight",
       {
         method: "POST",
         headers: {
