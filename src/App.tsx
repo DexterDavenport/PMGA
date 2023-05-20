@@ -16,6 +16,8 @@ function App() {
       <br />
       <br />
       <KilosToGallonsForm />
+      <br />
+      <button onClick={() => window.location.reload()}>Reset</button>
     </div>
   );
 }
