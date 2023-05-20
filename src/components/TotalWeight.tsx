@@ -29,7 +29,7 @@ const TotalPoundsForm = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label>Final Weight:</label>
+        <label>Total Weight:</label>
         <input
           type="tel"
           value={tr}
