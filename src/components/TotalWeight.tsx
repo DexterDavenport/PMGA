@@ -1,26 +1,24 @@
 import { useState, FormEvent } from "react";
 
-const NeededPoundsForm = () => {
-  const [req, setReq] = useState("");
-  const [r, setR] = useState("");
-  const [l, setL] = useState("");
-  const [c, setC] = useState("");
+const TotalPoundsForm = () => {
+  const [tr, setR] = useState("");
+  const [tl, setL] = useState("");
+  const [tc, setC] = useState("");
   const [result, setResult] = useState<number | null>(null);
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     const response = await fetch(
-      "https://real-ants-travel.loca.lt/needed_weight",
+      "https://real-ants-travel.loca.lt/total_weight",
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          req: parseFloat(req),
-          r: parseFloat(r),
-          l: parseFloat(l),
-          c: parseFloat(c),
+          tr: parseFloat(tr),
+          tl: parseFloat(tl),
+          tc: parseFloat(tc),
         }),
       }
     );
@@ -31,28 +29,22 @@ const NeededPoundsForm = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label>Needed Weight:</label>
+        <label>Final Weight:</label>
         <input
           type="text"
-          value={req}
-          onChange={(e) => setReq(e.target.value)}
-          placeholder="Pilots Request"
-        />
-        <input
-          type="text"
-          value={r}
+          value={tr}
           onChange={(e) => setR(e.target.value)}
           placeholder="Left"
         />
         <input
           type="text"
-          value={l}
+          value={tl}
           onChange={(e) => setL(e.target.value)}
           placeholder="Center"
         />
         <input
           type="text"
-          value={c}
+          value={tc}
           onChange={(e) => setC(e.target.value)}
           placeholder="Right"
         />
@@ -63,4 +55,4 @@ const NeededPoundsForm = () => {
   );
 };
 
-export default NeededPoundsForm;
+export default TotalPoundsForm;

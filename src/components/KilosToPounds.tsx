@@ -1,20 +1,20 @@
 import { useState, FormEvent } from "react";
 
-const PoundsToGallonsForm = () => {
+const KilosToPoundsForm = () => {
   const [inputValue, setInputValue] = useState("");
   const [result, setResult] = useState<number | null>(null);
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     const response = await fetch(
-      "https://real-ants-travel.loca.lt/pounds_to_gallons",
+      "https://real-ants-travel.loca.lt/kilos_to_pounds",
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          p: parseFloat(inputValue),
+          k: parseFloat(inputValue),
         }),
       }
     );
@@ -25,18 +25,18 @@ const PoundsToGallonsForm = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label>Pounds:</label>
+        <label>Kilos:</label>
         <input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          placeholder="lbs"
+          placeholder="kg"
         />
-        <button type="submit">Convert to Gallons</button>
+        <button type="submit">Convert to Pounds</button>
       </form>
-      {result !== null && <p>Result: About {result} Gallons</p>}
+      {result !== null && <p>Result: About {result} Pounds</p>}
     </div>
   );
 };
 
-export default PoundsToGallonsForm;
+export default KilosToPoundsForm;
