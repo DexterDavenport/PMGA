@@ -1,5 +1,6 @@
 import KilosToGallonsForm from "./components/KilosToPounds";
 import NeededPoundsForm from "./components/NeededPounds";
+import PoundsToGallonsAndKilosToPoundsForm from "./components/PoundsAndKilos";
 import PoundsToGallonsForm from "./components/PoundsToGallons";
 import TotalPoundsForm from "./components/TotalWeight";
 
@@ -17,6 +18,8 @@ function App() {
       <br />
       <KilosToGallonsForm />
       <br />
+      <br />
+      <PoundsToGallonsAndKilosToPoundsForm />
       <button onClick={() => window.location.reload()}>Reset</button>
     </div>
   );
