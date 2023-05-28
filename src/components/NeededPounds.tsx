@@ -6,6 +6,8 @@ const NeededPoundsForm = () => {
   const [l, setL] = useState("");
   const [c, setC] = useState("");
   const [result, setResult] = useState<number | null>(null);
+  const [weight, setWeight] = useState<number | null>(null);
+  const [gallons, setGallons] = useState<number | null>(null);
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
@@ -26,6 +28,8 @@ const NeededPoundsForm = () => {
     );
     const data = await response.json();
     setResult(data.result);
+    setWeight(data.weight);
+    setGallons(data.gallons);
   };
 
   return (
@@ -58,7 +62,9 @@ const NeededPoundsForm = () => {
         />
         <button type="submit">Submit</button>
       </form>
-      {result !== null && <p>Result: {result} Pounds Needed</p>}
+      {weight !== null && <p>The total weight onboard is {weight} Pounds</p>}
+      {result !== null && <p>The Weight needed is {result} Pounds</p>}
+      {gallons !== null && <p>The Weight needed is {gallons} Pounds</p>}
     </div>
   );
 };
