@@ -63,8 +63,8 @@ const NeededPoundsForm = () => {
         <button type="submit">Submit</button>
       </form>
       {weight !== null && <p>The total weight onboard is {weight} Pounds</p>}
-      {result !== null && <p>The Weight needed is {result} Pounds</p>}
-      {gallons !== null && <p>The Weight needed is {gallons} Pounds</p>}
+      {result !== null && <p>The weight needed is {result} Pounds</p>}
+      {gallons !== null && <p>You need about {gallons} </p>}
     </div>
   );
 };
