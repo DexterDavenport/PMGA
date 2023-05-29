@@ -64,7 +64,7 @@ const NeededPoundsForm = () => {
       </form>
       {weight !== null && <p>The total weight onboard is {weight} Pounds</p>}
       {result !== null && <p>The weight needed is {result} Pounds</p>}
-      {gallons !== null && <p>You need about {gallons} </p>}
+      {gallons !== null && <p>You need about {gallons} Gallons </p>}
     </div>
   );
 };
